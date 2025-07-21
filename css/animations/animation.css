@@ -3,7 +3,8 @@
     animation: cardFadeFoward 1.5s cubic-bezier(0.5, 1, 0.89, 1) 0s 1 normal none;
 }
 
-/* KEYFRAMES */
+
+/* ENTRY */
 @keyframes cardFadeFoward {
 	0% {
 		opacity: 0;
@@ -15,3 +16,35 @@
 		transform: scale(1);
 	}
 }
+
+/* PERPETUO */
+.scale-in-out {
+  animation: scalePulse 1.5s;
+  display: inline-block;
+}
+
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.5s;
+}
+
+.delay3 {
+  animation-delay: 1s;
+}
+/* KEYFRAMES */
+
+@keyframes scalePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+
