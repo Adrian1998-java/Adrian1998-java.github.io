@@ -1,12 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const elementos = document.querySelectorAll(".col");
+let elementos;
 
-  elementos.forEach(e => {
-    e.addEventListener("mouseover", () => {
-      e.classList.add("scale-in-out");
-    });
-    e.addEventListener("mouseout", () => {
-      e.classList.remove("scale-in-out");
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  elementos = document.querySelectorAll(".col");
+
+  elementos.forEach((e, index) => {
+    setTimeout(() => {
+      e.classList.add("card-animation");
+      e.classList.remove("hidden");
+    }, 1000 + (index * 250));
   });
 });
